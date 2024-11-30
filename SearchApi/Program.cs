@@ -54,7 +54,12 @@ app.MapGet("/search", async (string? city, int? rating) =>
 
 async Task<List<Hotel>> SearchHotels(string? city, int? rating)
 {
-    Console.WriteLine("host-->"); 
+    Console.WriteLine("host-->");
+    var host = "https://507b3c520fed4264a49694ead351d6d4.us-central1.gcp.cloud.es.io";
+    var userName = "elastic";
+    var password = "UrZfevHAhpsBRH04HMZZnkq5";
+    var indexName = "event";
+    Console.WriteLine("indexName-->");
     //var host = Environment.GetEnvironmentVariable("host");// "https://507b3c520fed4264a49694ead351d6d4.us-central1.gcp.cloud.es.io";
     //var userName = Environment.GetEnvironmentVariable("userName");//"elastic";
     //var password = Environment.GetEnvironmentVariable("password");//"UrZfevHAhpsBRH04HMZZnkq5";
